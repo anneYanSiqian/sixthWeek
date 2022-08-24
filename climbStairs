@@ -1,0 +1,11 @@
+/**
+ * @param {number} n
+ * @return {number}
+ */
+var climbStairs = function(n) {
+    let dfs = [1,2];
+    for (i=2; i<n; i++) {
+        dfs[i] = dfs[i-1] + dfs[i-2];
+    }
+    return dfs[n-1];
+};
